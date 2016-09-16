@@ -29,6 +29,7 @@
                 	</thead><tbody>
 <?php 
 //connection to the database
+error_reporting(E_ERROR);
 require_once "DBManager.php";
 $client = new DBManager();
 
