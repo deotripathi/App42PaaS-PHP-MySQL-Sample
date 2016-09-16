@@ -70,11 +70,7 @@
 			</form>
 			</div>
             
-            <div class="reachus_wrapper"> 
-            	<div class="reach_icon"><img border="0" alt="REACH US AT" src="images/reach_icon.png"></img></div>
-              
-            </div>
-            
+         
            
             </div>
     	</div>
