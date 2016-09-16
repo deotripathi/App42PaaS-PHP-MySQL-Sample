@@ -24,9 +24,9 @@ class DBManager {
 				$dbName = rtrim(ltrim($v));
 			}
 		}
-			$this->client = mysqli_connect("$ip:$port", $user, $password, $dbName)
+			$this->client = mysql_connect("$ip:$port", $user, $password, $dbName)
 			or die("Unable to connect to MySQL");
-			//$this->selected = mysqli_select_db($dbName,$this->client) or die(mysql_error());
+			$this->selected = mysqli_select_db($dbName,$this->client) or die(mysql_error());
 	  
     }
 
