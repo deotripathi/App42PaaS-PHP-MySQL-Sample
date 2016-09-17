@@ -13,15 +13,16 @@ class DBManager {
 		foreach ($lines as $line) {
 			list($k, $v) = explode('=', $line);
 			if (rtrim(ltrim($k)) == rtrim(ltrim("app42.paas.db.username"))) {
-				$user = rtrim(ltrim($v));
+				$user = getenv('USER_NAME');
 			}if (rtrim(ltrim($k)) == rtrim(ltrim("app42.paas.db.port"))) {
-				$port = rtrim(ltrim($v));
+				$port = getenv('PORT');
 			}if (rtrim(ltrim($k)) == rtrim(ltrim("app42.paas.db.password"))) {
-				$password = rtrim(ltrim($v));
+				$password = getenv('PASSWORD');
 			}if (rtrim(ltrim($k)) == rtrim(ltrim("app42.paas.db.ip"))) {
-				$ip = rtrim(ltrim($v));
+				$ip = getenv('IP');
 			}if (rtrim(ltrim($k)) == rtrim(ltrim("app42.paas.db.name"))) {
-				$dbName = rtrim(ltrim($v));
+				//$dbName = rtrim(ltrim($v));
+				$dbName = getenv('DATABASE_NAME');
 			}
 		}
 			$this->client = mysql_connect("$ip:$port", $user, $password, $dbName)
